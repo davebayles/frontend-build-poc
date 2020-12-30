@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  padding: 1rem 1.25rem;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: $radius-default;
+  &__primary {
+    background-color: $secondary-color;
+    color: white;
+  }
+  &__secondary {
+    background-color: transparent;
+    color: $secondary-color;
+  }
+}

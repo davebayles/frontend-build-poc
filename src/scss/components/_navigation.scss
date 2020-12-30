@@ -1,0 +1,84 @@
+.nav {
+  display: none;
+
+  @include breakpoint(large) {
+    display: block;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__menu {
+      display: block;
+      text-align: right;
+  }
+  &__item {
+    display: inline-block;
+  }
+  &__link {
+      font-family: $font-primary;
+      padding: 0.5rem;
+      margin: 0 0.2rem;
+    }
+}
+
+
+
+.nav-mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background: $primary-color;
+  z-index: 101;
+  overflow: scroll;
+  visibility: hidden;
+  opacity: 0;
+  text-align: right;
+
+  .list-reset {
+    display: block;
+    list-style-type: none;
+  }
+
+  &.active {
+    padding-top: 1rem;
+    margin-right: 1rem;
+    visibility: visible;
+    opacity: 1;
+
+    .toggle {
+      margin-right: 1rem;
+    }
+  }
+
+  li {
+    margin-right: 2rem;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    color: $white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
+
+  .admin-bar & {
+    top: 46px;
+  }
+}
+
+  .toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }

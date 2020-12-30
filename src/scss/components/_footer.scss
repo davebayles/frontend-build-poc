@@ -1,0 +1,78 @@
+.footer {
+  position: relative;
+  color: $white;
+  background-image: linear-gradient(103deg, #010e2a 1%, #0d2242 99%);
+
+  &__wrapper {
+    padding: 3rem 1rem;
+    border-bottom: 1px $dark-blue-gray solid;
+    text-align: center;
+    @include breakpoint(large) {
+      padding: 8rem 1rem;
+    }
+  }
+  &__title {
+    font-family: $font-primary;
+    font-size: 1.625rem;
+    margin-bottom: 2rem;
+    @include breakpoint(large) {
+      font-size: 2.625rem;
+    }
+  }
+  &__copy {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    @include breakpoint(large) {
+      font-size: 1.1875rem;
+    }
+  }
+  &__bottom {
+    padding: 2rem 0;
+    text-align: center;
+    @include breakpoint(large) {
+      text-align: left;
+      padding: 4rem 0;
+    }
+  }
+  &__copyright {
+    font-size: .5625em;
+    margin-bottom: 2rem;
+    @include breakpoint(large) {
+      margin-bottom: 0;
+    }
+  }
+  &__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    li {
+      display: inline-block;
+    }
+    a {
+      color: $white;
+      font-size: 0.75em;
+      padding:1em 0.5em;
+    }
+    @include breakpoint(large) {
+      text-align: right;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  & .watermark {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 105%;
+    margin: auto;
+    bottom: 0;
+  }
+}
